@@ -1,0 +1,15 @@
+pub struct Screen {
+    width: u32,
+    height: u32,
+    size: u32,
+}
+
+impl Screen {
+    pub const fn new() -> Screen {
+        Screen {
+            width: 64,
+            height: 32,
+            size: 64 * 32,
+        }
+    }
+}

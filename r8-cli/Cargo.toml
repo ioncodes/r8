@@ -1,0 +1,7 @@
+[package]
+name = "r8-cli"
+version = "0.1.0"
+authors = ["lucam"]
+
+[dependencies]
+r8 = { path = "../r8" }
