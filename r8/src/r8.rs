@@ -34,5 +34,21 @@ pub struct R8 {
     pub keypad: [u32; 16],
     pub sound_timer: u32,
     pub delay_timer: u32,
-    pub opcode: u32,
+    pub opcode: u32, // create class for this
+}
+
+impl R8 {
+    pub fn new() -> R8 {
+        R8 {
+            program_counter: ENTRY_POINT,
+            stack_pointer: 0x000,
+            registers: Registers::new(),
+            stack: [0x000; 16],
+            memory: [0x000; MEMORY_SIZE as usize],
+            keypad: [0x000; 16], // todo: initialize keypad
+            sound_timer: 0x000,
+            delay_timer: 0x000,
+            opcode: 0x000,
+        }
+    }
 }
