@@ -39,7 +39,7 @@ pub struct R8 {
 
 impl R8 {
     pub fn new() -> R8 {
-        R8 {
+        let r8 = R8 {
             program_counter: ENTRY_POINT,
             stack_pointer: 0x000,
             registers: Registers::new(),
@@ -49,6 +49,12 @@ impl R8 {
             sound_timer: 0x000,
             delay_timer: 0x000,
             opcode: 0x000,
-        }
+        };
+        return r8;
     }
+    /*
+    pub fn load_rom(rom: ) {
+
+    }
+    */
 }
